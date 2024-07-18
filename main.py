@@ -76,8 +76,26 @@ def q4():
 
 
 def q5():
-    pass
-
+    operacao = input("Digite: ")
+    temp = float(input("Digite a temp: "))
+    if operacao == "C":
+        if temp <= -273.15:
+            print("Valor de temperatura abaixo do minimo")
+        else:
+            print(f"{temp + 273.15:.2f} K")
+            print(f"{temp * 1.8 + 32:.2f} F")
+    if operacao == "F":
+        if temp <= -459.67:
+            print("Valor de temperatura abaixo do minimo")
+        else:
+            print(f"{(temp - 32) / 1.8:.2f} C")
+            print(f"{(temp + 459.67) / 1.8:.2f} K")
+    if operacao == "K":
+        if temp <= 0.0:
+            print("Valor de temperatura abaixo do minimo")
+        else:
+            print(f"{temp - 273.15:.2f} C")
+            print(f"{temp * 1.8 - 459.67:.2f} F")
 if __name__=="__main__":
     # teste sua questão manualmente aqui
     
